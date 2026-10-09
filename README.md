@@ -12,6 +12,8 @@ gradle assembleDebug
 
 The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
+A signed debug APK is also included in [`release/WorkerVsCapitalist-android-debug.apk`](release/WorkerVsCapitalist-android-debug.apk) for direct download.
+
 The GitHub Actions workflow builds this APK on pushes and pull requests and stores it as a downloadable workflow artifact.
 
 After each push or pull request, open the repository's **Actions** tab and download the `worker-vs-capitalist-android-debug` artifact from the completed **Android APK** run.
