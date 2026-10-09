@@ -1,28 +1,27 @@
-# Worker vs Capitalist for Android
+# Рабочий против капиталиста
 
-Android WebView app containing the standalone game interface extracted from the packaged Windows Electron build.
+## Скачать игру
 
-## Build
+| Устройство | Скачать |
+|---|---|
+| Windows 64-bit | [Скачать для Windows](https://github.com/Darmen-maker2023/worker-vs-capitalist/releases/download/v1.0.0/WorkerVsCapitalist-win32-x64.rar) |
+| Android | [Скачать APK для Android](https://github.com/Darmen-maker2023/worker-vs-capitalist/releases/download/v1.0.0/WorkerVsCapitalist-android-debug.apk) |
 
-Install JDK 17, Android SDK Platform 35, and Android Build Tools 35.0.0. Then set `ANDROID_HOME` (or `ANDROID_SDK_ROOT`) to the SDK directory and run:
+[Открыть страницу релиза](https://github.com/Darmen-maker2023/worker-vs-capitalist/releases/tag/v1.0.0)
+
+## Установка
+
+- **Windows:** распакуй архив и запусти `WorkerVsCapitalist.exe`.
+- **Android:** скачай APK, открой его на телефоне и подтверди установку.
+
+## Сборка Android-версии
+
+Нужны JDK 17 и Android SDK Platform 35. Собери APK командой:
 
 ```sh
 gradle assembleDebug
 ```
 
-The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
+Готовый файл появится в `app/build/outputs/apk/debug/app-debug.apk`. GitHub Actions также собирает APK после каждого push и pull request.
 
-A signed debug APK is also included in [`release/WorkerVsCapitalist-android-debug.apk`](release/WorkerVsCapitalist-android-debug.apk) for direct download.
-
-The GitHub Actions workflow builds this APK on pushes and pull requests and stores it as a downloadable workflow artifact.
-
-After each push or pull request, open the repository's **Actions** tab and download the `worker-vs-capitalist-android-debug` artifact from the completed **Android APK** run.
-
-## App details
-
-- Package: `com.worker.vsc`
-- Minimum Android version: Android 6.0 (API 23)
-- Target Android version: API 35
-- The game runs locally in an Android WebView. It does not request network access.
-
-The APK is a debug build for installation and review. A Play Store release should be signed with a private release key.
+Android-приложение работает локально и не запрашивает доступ к интернету. В репозитории лежит подписанный debug APK; для публикации в Google Play потребуется release-подпись.
